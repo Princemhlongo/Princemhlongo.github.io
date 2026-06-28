@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Princess Mhlongo — Portfolio</title>
+  <meta name="description" content="Software developer and Computer Science student based in Durban, South Africa." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-logo">P. Mhlongo</div>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="recommendations.html">Recommendations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="resume.pdf" download class="btn btn--ghost btn--sm">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </header>
+
+  <section class="page-hero">
+    <div class="hero-grid">
+
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Currently: Computer Science Student &amp; Building
+        </div>
+
+        <h1 class="hero-name">
+          <span class="given">Princess</span>
+          <span class="family">Mhlongo.</span>
+        </h1>
+
+        <p class="hero-role">
+          <span id="typing-text"></span>
+        </p>
+
+        <p class="hero-tagline">
+          Building technology that <strong>empowers people, businesses, and communities</strong>.
+          Software developer based in Durban, South Africa.
+        </p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn--primary">
+            <i class="fas fa-folder-open"></i> View My Work
+          </a>
+          <a href="contact.html" class="btn btn--ghost">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/Princess.jpeg" alt="Princess Mhlongo" />
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/princess-mhlongo-917301329" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/Princemhlongo" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:princessnqobilemhlongo@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <div style="text-align:right;">
+      <p class="footer-copy">&copy; 2026 Miss Mhlongo &middot; Njomane Devs &middot; Durban, ZA</p>
+      <p class="footer-copy" style="margin-top:0.2rem;opacity:0.5;font-size:0.72rem;">Site preview &middot; Full version coming soon</p>
+    </div>
+  </footer>
+
+  <script>
+    const roles = ["Software Developer", "CS Student", "Problem Solver", "Builder"];
+    let roleIndex = 0, charIndex = 0, deleting = false;
+    const el = document.getElementById("typing-text");
+    function type() {
+      const current = roles[roleIndex];
+      el.textContent = deleting ? current.slice(0, charIndex--) : current.slice(0, charIndex++);
+      if (!deleting && charIndex > current.length) { setTimeout(() => { deleting = true; type(); }, 1600); return; }
+      if (deleting && charIndex < 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
+      setTimeout(type, deleting ? 55 : 95);
+    }
+    type();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="js/birthday-confetti.js"></script>
+
+</body>
+</html>
