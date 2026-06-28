@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommendations — Princess Mhlongo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .ref-card {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .ref-card__name {
+      font-family: var(--f-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--c-text);
+    }
+    .ref-card__role {
+      font-size: 0.85rem;
+      color: var(--c-sky);
+      font-weight: 500;
+    }
+    .ref-card__org {
+      font-size: 0.82rem;
+      color: var(--c-text-2);
+    }
+    .ref-card__divider {
+      height: 1px;
+      background: var(--c-border);
+      margin: 0.5rem 0;
+    }
+    .ref-card__email {
+      font-size: 0.8rem;
+      color: var(--c-text-3);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color var(--ease);
+    }
+    .ref-card__email:hover { color: var(--c-sky); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-logo">P. Mhlongo</div>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="recommendations.html" class="active">Recommendations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="resume.pdf" download class="btn btn--ghost btn--sm">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </header>
+
+  <section class="page-section">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">References &amp; Recommendations</p>
+        <h1 class="section-title">People I've Worked With</h1>
+        <p class="section-lead">
+          Colleagues, mentors, and leaders who can speak to my work and character.
+          Written recommendations are available on request.
+        </p>
+      </div>
+
+      <div class="rec-grid">
+
+        <!-- SK Khuzwayo -->
+        <div class="card ref-card">
+          <p class="ref-card__name">Sphiwe "SK" Khuzwayo</p>
+          <p class="ref-card__role">CEO &amp; Founder</p>
+          <p class="ref-card__org">KZN Tech Horizons</p>
+          <div class="ref-card__divider"></div>
+          <a href="mailto:sphiwe@kznth.co.za" class="ref-card__email">
+            <i class="fas fa-envelope"></i> sphiwe@kznth.co.za
+          </a>
+          <a href="mailto:info@kznth.co.za" class="ref-card__email">
+            <i class="fas fa-envelope"></i> info@kznth.co.za
+          </a>
+        </div>
+
+        <!-- Sabelo Ndimande -->
+        <div class="card ref-card">
+          <p class="ref-card__name">Sabelo Ndimande</p>
+          <p class="ref-card__role">CEO &amp; Founder</p>
+          <p class="ref-card__org">Isabelo Sempumelelo Foundation</p>
+          <div class="ref-card__divider"></div>
+          <a href="mailto:sabelo@sabelondimande.co.za" class="ref-card__email">
+            <i class="fas fa-envelope"></i> sabelo@sabelondimande.co.za
+          </a>
+        </div>
+
+        <!-- Adam Ismail -->
+        <div class="card ref-card">
+          <p class="ref-card__name">Adam Ismail</p>
+          <p class="ref-card__role">Lecturer</p>
+          <p class="ref-card__org">Emeris University</p>
+          <div class="ref-card__divider"></div>
+          <a href="mailto:adismail@emeris.ac.za" class="ref-card__email">
+            <i class="fas fa-envelope"></i> adismail@emeris.ac.za
+          </a>
+        </div>
+
+      </div>
+
+      <p class="note">
+        Written recommendation letters are available on request. LinkedIn recommendations can be viewed on
+        <a href="https://www.linkedin.com/in/princess-mhlongo-917301329" target="_blank" rel="noopener"
+           style="color:var(--c-sky);">my LinkedIn profile</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/princess-mhlongo-917301329" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/Princemhlongo" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:princessnqobilemhlongo@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <div style="text-align:right;">
+      <p class="footer-copy">&copy; 2026 Miss Mhlongo &middot; Njomane Devs &middot; Durban, ZA</p>
+      <p class="footer-copy" style="margin-top:0.2rem;opacity:0.5;font-size:0.72rem;">Site preview &middot; Full version coming soon</p>
+    </div>
+  </footer>
+
+</body>
+</html>
