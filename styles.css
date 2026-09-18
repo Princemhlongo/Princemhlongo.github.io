@@ -415,6 +415,24 @@ ul { list-style: none; }
   letter-spacing: 0.02em;
 }
 
+.cert-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-border-hi);
+  margin-bottom: 0.4rem;
+  background: var(--c-sky-dim);
+}
+
+.cert-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
 /* ── EVENTS ──────────────────────────────────────────── */
 .events-grid {
   display: grid;
